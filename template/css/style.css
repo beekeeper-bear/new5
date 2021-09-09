@@ -1,0 +1,444 @@
+:root {
+    --color1: #66C05D;
+    --color2: #000;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #efefef;
+    font-size: 16px;
+    min-width: 320px;
+}
+
+img {
+    max-width: 100%;
+    /* адаптивность изображений */
+    height: auto;
+}
+
+section {
+    padding: 50px 0;
+}
+
+a {
+    color: #111;
+}
+
+/*************************
+*******Shop CSS******
+**************************/
+
+#advertisement {
+    padding-bottom: 45px;
+}
+
+#advertisement img {
+    width: 100%;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    padding-left: 15px;
+}
+
+.pagination li:first-child a, .pagination li:first-child span {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    margin-left: 0;
+}
+
+.pagination li:last-child a, .pagination li:last-child span {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.pagination .active a, .pagination .active span, .pagination .active a:hover, .pagination .active span:hover, .pagination .active a:focus, .pagination .active span:focus {
+    background-color: var(--color1);
+    border-color: var(--color1);
+    color: #FFFFFF;
+    cursor: default;
+    z-index: 2;
+}
+
+.pagination li a, .pagination li span {
+    background-color: #f0f0e9;
+    border: 0;
+    float: left;
+    line-height: 1.42857;
+    margin-left: -1px;
+    padding: 6px 12px;
+    position: relative;
+    text-decoration: none;
+    margin-right: 5px;
+    color: #000;
+}
+
+.pagination li a:hover {
+    background: var(--color1);
+    color: #fff;
+}
+
+a:hover {
+    color: var(--color1);
+}
+
+.main {
+    margin: auto 5%;
+}
+
+.width-search {
+    width: 350px;
+}
+
+@media (max-width: 500px) {
+    /* если меньше 500пк*/
+    .width-search {
+        width: 180px;
+    }
+}
+
+.icon-basket:before {
+    color: var(--color2);
+}
+
+.icon-user-o:before {
+    color: var(--color2);
+}
+
+.icon-basket:hover::before {
+    color: var(--color1);
+}
+
+.icon-user-o:hover:before {
+    color: var(--color1);
+}
+
+.nav {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header-nav>ul>li>a::after {
+    content: '';
+    display: block;
+    width: 100%;
+    background-color: var(--color2);
+    height: 1px;
+    transition: all .3s;
+    transform: scale(0);
+}
+
+.header-nav>ul>li>a:hover::after {
+    transform: scale(1);
+}
+
+.produkt-detalis {
+    color: #000;
+}
+
+.product-links {
+    display: flex;
+    justify-content: space-between;
+    line-height: 14px;
+    margin: auto 7px;
+}
+
+.counter__container {
+    display: flex;
+    justify-content: space-around;
+    margin: auto 4px;
+}
+
+.counter {
+    width: 40px;
+    text-align: center;
+}
+
+.minus, .plus {
+    height: 24px;
+    width: 20px;
+}
+
+.plus {
+    margin-right: 3px;
+}
+
+.counter-input {
+    margin: auto 2px;
+}
+
+.counter-input input {
+    height: 24px;
+}
+
+.product-thumb {
+    background-color: #efefef;
+}
+
+.product-thumb a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    padding: 20px;
+}
+
+.product-thumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.product-detalis h4 a {
+    font-size: 20px;
+    display: block;
+    height: 50px;
+    overflow: hidden;
+    text-decoration: none;
+    margin-left: 4px;
+}
+
+.product-detalis p {
+    font-size: 15px;
+    margin-bottom: 20px;
+    color: #999;
+    height: 44px;
+    overflow: hidden;
+}
+
+.product-bottom-details {
+    overflow: hidden;
+    border-top: 1px solid rgb(80, 76, 76);
+    padding-top: 10px;
+}
+
+.product-price {
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+    margin: auto 0;
+    color: #000;
+    font-size: 14px;
+}
+
+.product-card {
+    box-sizing: border-box;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.006);
+    transition: all .3s;
+    padding: 10px;
+    background-color: #F8F9FA;
+}
+
+.product-card:hover {
+    box-sizing: border-box;
+    box-shadow: 0 14px 30px -15px rgba(0, 0, 0, 0.75);
+    border-right: 1px solid var(--color1);
+}
+
+.button-links {
+    width: 60px;
+    height: 38px;
+}
+
+.button-links a {
+    background-color: var(--color1);
+    border: 1px solid var(--color1);
+    color: #fff;
+}
+
+.button-links a:hover {
+    background-color: #198754;
+    border: 1px solid var(--color1);
+    color: #fff;
+}
+
+.button-links a:focus {
+    outline: none !important;
+    box-shadow: none;
+}
+
+.button-links a:focus-visible {
+    outline: none !important;
+    box-shadow: none;
+}
+
+/* Footer */
+
+.footer {
+    background-color: #343434;
+}
+
+.footer h4 {
+    color: #ccc;
+    text-transform: uppercase;
+    font-size: 16px;
+    border-bottom: 1px solid #665;
+    padding-bottom: 3px;
+    padding-top: 30px;
+    padding-right: 40px;
+}
+
+.footer a {
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.footer a, .footer li {
+    color: #c8c8c8;
+}
+
+.footer li a {
+    display: block;
+}
+
+.footer-icons {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 20px;
+}
+
+/*тестовые стили для форм*/
+
+form.forms {
+    width: 600px;
+    margin: 25px auto;
+    background: #f5f5f5 url(images/bg.png);
+    padding: 20px;
+    border: 4px double #bbb;
+    color: #00050E;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-shadow: inset 3px 3px 5px rgba(154, 147, 140, 0.5), 2px 2px 5px rgba(255, 255, 255, 1);
+}
+
+#p {
+    width: 100%;
+    color: #555;
+    border-bottom: 1px dotted #555;
+    padding: 0 0 2px 0;
+    margin: 0 0 20px 0;
+    font-size: 18px;
+}
+
+.p-span {
+    width: 100%;
+    color: #555;
+    border-bottom: 1px dotted #555;
+    padding: 0 0 2px 0;
+    margin: 0 0 20px 0;
+}
+
+form.forms label {
+    margin: 0 0 19px 1px;
+    display: block;
+}
+
+form.forms span {
+    display: inline-block;
+    width: 175px;
+    cursor: pointer;
+    font-size: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+form.forms input {
+    width: 250px;
+    padding: 6px 0 6px 10px;
+    line-height: 16px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 13px;
+    color: #555;
+}
+
+form.forms select {
+    font-size: 13px;
+    color: #555;
+    line-height: 16px;
+}
+
+form.forms textarea {
+    width: 90%;
+    height: 70px;
+    font-size: 13px;
+    color: #555;
+}
+
+form.forms input:focus {
+    border: 1px solid #75bbe6;
+    color: #1b6d9c;
+}
+
+form.forms input.knopf {
+    width: 170px;
+    padding: 0px 0 0px 0px;
+    line-height: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0px 10px 372px;
+    background: rgb(180, 221, 180);
+    /* Old browsers */
+    background: -moz-linear-gradient(top, rgba(180, 221, 180, 1) 0%, rgba(131, 199, 131, 1) 22%, rgba(82, 177, 82, 1) 53%, rgba(0, 138, 0, 1) 77%, rgba(0, 87, 0, 1) 95%, rgba(0, 36, 0, 1) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(180, 221, 180, 1) 0%, rgba(131, 199, 131, 1) 22%, rgba(82, 177, 82, 1) 53%, rgba(0, 138, 0, 1) 77%, rgba(0, 87, 0, 1) 95%, rgba(0, 36, 0, 1) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(180, 221, 180, 1) 0%, rgba(131, 199, 131, 1) 22%, rgba(82, 177, 82, 1) 53%, rgba(0, 138, 0, 1) 77%, rgba(0, 87, 0, 1) 95%, rgba(0, 36, 0, 1) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+form.forms input.knopf:hover {
+    color: #00050E;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    box-shadow: inset 2px 2px 5px rgba(154, 147, 140, 0.5), 1px 1px 5px rgba(255, 255, 255, 1);
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.message {
+    width: 100%;
+    color: #555;
+    border-bottom: 1px dotted #555;
+    padding: 0 0 2px 0;
+    margin: 20px 0 20px 0;
+    font-size: 18px;
+}
+
+.center {
+    margin: auto;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../../upload/images/icons/next.svg);
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../../upload/images/icons/left-arrow.svg);
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 15px;
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+.width_imgs {
+    width: 100px;
+    height: 90px;
+}
