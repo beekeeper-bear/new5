@@ -56,15 +56,25 @@
         function() {
             $(".add-to-cart").click(function() {
                 var id = $(this).attr("data-id");
-                $.post("/cart/addAjax/" + id, {}, function(data) {
+                var count = $("#counter_" + id).val();
+                $.post("/cart/addAjax/" + id, {count:count}, function(data) {
                     $("#cart-count").html(data);
                 });
                 return false;
             });
 
+            /*$(".icon-plus").click(function() {
+                var id = $(this).attr("data-id");
+                $.post("/cart/addAjax/" + id, {}, function(data) {
+                    $("#cart-count").html(data);
+                });
+                return false;
+            });*/
+
+
 
             one();
-
+            //console.log(summ);
         });
 
 
@@ -86,31 +96,64 @@
             return false;
         }
 
-         $.post("/cart/AddAjaxCount/", {}, function(data) {
-             $("#cart-count").html(data);
-         });
+        $.post("/cart/AddAjaxCount/", {}, function(data) {
+            $("#cart-count").html(data);
+        });
 
 
-      /*  $.ajax({
-                method: "POST",
-                   url: "/cart/AddAjaxCount/",
-              //  url: "/cart/addAjax/34",
-              //  data: {
-                    text: '34'
-                
+        /*  $.ajax({
+                  method: "POST",
+                     url: "/cart/AddAjaxCount/",
+                //  url: "/cart/addAjax/34",
+                //  data: {
+                      text: '34'
+                  
 
-            })
+              })
 
-            .done(function(data) {
-                //  alert ('Запрос выполнен');
-                $("#cart-count").html(data);
-            });*/
+              .done(function(data) {
+                  //  alert ('Запрос выполнен');
+                  $("#cart-count").html(data);
+              });*/
 
 
 
-    
-       // console.log('oneoneoneoneoneoneoneone');
+
+        // console.log('oneoneoneoneoneoneoneone');
+
+        //console.log (summ);
         one.isRun = true;
+    }
+
+    function click_plus(id) {
+
+        var count = $("#counter_" + id).val();
+        count++;
+        count = click_validation(count);
+        // console.log("#counter_" + id);
+        $("#counter_" + id).val(count);
+
+    }
+
+    function click_minus(id) {
+        var count = $("#counter_" + id).val();
+        count--;
+        count = click_validation(count);
+        console.log("#counter_" + id);
+        $("#counter_" + id).val(count);
+
+    }
+
+    function click_validation(count) {
+
+        if (count <= 0) {
+            count = 1;
+        }
+        if (count >= 999) {
+            count = 999;
+        }
+        return count;
+
     }
 </script>
 

@@ -28,8 +28,12 @@ class CartController
      */
     public function actionAddAjax($id)
     {
+        $count  = $_POST['count'];
+        
+         
+
         // Добавляем товар в корзину и печатаем результат: количество товаров в корзине
-        echo Cart::addProduct($id);
+        echo Cart::addProduct($id,$count);
         return true;
     }
 

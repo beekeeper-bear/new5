@@ -6,7 +6,6 @@
 
         <div class="row">
 
-
             <?php foreach ($categories as $categoryItem) : ?>
 
                 <div class=" col-xl-3 col-lg-4 col-sm-6">
@@ -21,9 +20,6 @@
                         </div>
 
 
-
-
-
                     </div><!-- produkt-card -->
 
                 </div>
@@ -34,15 +30,6 @@
         </div> <!-- row -->
 
     </div>
-
-
-
-
-
-
-
-
-
 
 </section>
 <!-- main-content -->
