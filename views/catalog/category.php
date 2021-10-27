@@ -35,15 +35,20 @@
                             <div class="counter__container">
 
                                 <button class="minus">
-                                    <span class="icon-minus" onclick="click_minus(<?php echo $product['id']; ?>)">-</span>
+                                    <span class="icon-minus" >-</span>
                                 </button>
+
+
+
 
                                 <div class="counter-input">
                                     <input class="counter" id="counter_<?php echo $product['id']; ?>" type="text" value="1" data-max="999999" data-step="1" data-min="1">
                                 </div>
 
+
+
                                 <button class="plus">
-                                    <span class="icon-plus" onclick="click_plus(<?php echo $product['id']; ?>)">+</span>
+                                    <span class="icon-plus">+</span>
                                 </button>
 
 

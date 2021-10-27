@@ -52,6 +52,67 @@
 <script src="/template/js/bootstrap.bundle.min.js"></script>
 <script src="/template/js/jquery-git.min.js"></script>
 <script>
+
+
+
+
+for(let elem of document.querySelectorAll('.counter__container')){
+
+
+      elem.addEventListener('click', function(e) {
+
+        if(e.target.className == 'icon-plus' ||  e.target.className == 'plus'  ) {
+
+        let element = elem.getElementsByClassName('counter')[0];  
+        
+        element.value = click_validation(++element.value);
+            
+     }
+
+     if(e.target.className == 'icon-minus' || e.target.className == 'minus') {
+
+     let element = elem.getElementsByClassName('counter')[0];  
+
+     element.value = click_validation(--element.value);
+    
+}
+
+      },true)
+
+
+    }
+
+
+
+
+     if (addEventListener in document) {
+         document.addEventListener('load',myFunction(),false);
+
+     }
+
+     else { 
+         document.onload =myFunction();
+     }
+
+     function myFunction() {
+
+        console.log('hello'); 
+
+     }
+  
+      
+
+    
+
+
+
+
+
+
+
+    
+
+
     $(document).ready(
         function() {
             $(".add-to-cart").click(function() {
@@ -125,7 +186,7 @@
         one.isRun = true;
     }
 
-    function click_plus(id) {
+  /*  function click_plus(id) {
 
         var count = $("#counter_" + id).val();
         count++;
@@ -133,18 +194,12 @@
         // console.log("#counter_" + id);
         $("#counter_" + id).val(count);
 
-    }
+    }*/
 
-    function click_minus(id) {
-        var count = $("#counter_" + id).val();
-        count--;
-        count = click_validation(count);
-        console.log("#counter_" + id);
-        $("#counter_" + id).val(count);
-
-    }
-
+ 
     function click_validation(count) {
+           
+
 
         if (count <= 0) {
             count = 1;
